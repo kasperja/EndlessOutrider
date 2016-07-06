@@ -2,6 +2,8 @@
 <html lang="en-us">
   <head>
 
+
+
     <meta charset="utf-8">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <title>Unity WebGL Player | Endless Outrider</title>
@@ -16,14 +18,38 @@ canvas {
   height: 100%;
   position: absolute;
 }
+
+p#loadingInfo {
+  color: #666;
+  letter-spacing: 5px;
+  position: absolute;
+  width: 100%;
+  font-family: "Monaco", sans-serif;
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 42px;
+  margin-top: 10px;
+}
+
     /* a style sheet needs to be present for cursor hiding and custom cursors to work. */
     </style>
+
   </head>
   <body>
 
+
+ 
+    
+
+	
     <canvas class="emscripten" id="canvas" oncontextmenu="event.preventDefault()">
-	<font size = 42> Please wait...</font>
+	
 	</canvas>
+
+<div id="loadingBox">
+  <p id="loadingInfo">Loading...</p>
+</div>
+
     <script type='text/javascript'>
   var Module = {
     TOTAL_MEMORY: 268435456,
@@ -36,5 +62,6 @@ canvas {
 </script>
 <script src="Release/UnityLoader.js"></script>
 
-  </body>
+ 
+</body>
 </html>
